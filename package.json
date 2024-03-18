@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js -e ejs css scss",
     "start": "node server.js",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
@@ -15,9 +15,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0"
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^8.2.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
